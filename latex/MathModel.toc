@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1.}问题重述}{2}{section.1}%
+\contentsline {subsection}{\numberline {1\,.\,1}问题背景}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1\,.\,2}问题提出}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2.}模型假设}{3}{section.2}%
+\contentsline {section}{\numberline {3.}符号说明}{4}{section.3}%
+\contentsline {section}{\numberline {4.}问题的分析}{5}{section.4}%
+\contentsline {subsection}{\numberline {4\,.\,1}问题一 xxx}{5}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4\,.\,1\,.\,1}问题描述和分析}{5}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4\,.\,1\,.\,2}模型建立与求解}{6}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4\,.\,2}问题二 xxx}{6}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4\,.\,2\,.\,1}问题描述和分析}{6}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4\,.\,2\,.\,2}模型建立与求解}{6}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4\,.\,3}问题三 xxx}{6}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4\,.\,3\,.\,1}问题描述和分析}{6}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4\,.\,3\,.\,2}模型建立与求解}{6}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4\,.\,4}问题四 xxx}{7}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4\,.\,4\,.\,1}问题描述和分析}{7}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4\,.\,4\,.\,2}模型建立与求解}{7}{subsubsection.4.4.2}%
+\contentsline {section}{\numberline {5.}模型的评价}{7}{section.5}%
+\contentsline {subsection}{\numberline {5\,.\,1}模型的优点}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5\,.\,2}模型的缺点}{7}{subsection.5.2}%
+\contentsline {section}{\numberline {6.}写作参考格式}{7}{section.6}%
+\contentsline {section}{\numberline {7.}参考文献}{7}{section.7}%
+\contentsline {section}{\numberline {附录A}程序代码}{9}{section.1}%
+\contentsfinish 
