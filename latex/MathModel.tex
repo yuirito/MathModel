@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{multirow}
 \usepackage{threeparttable}
+\usepackage{pifont}
 \numberwithin{figure}{section}
 \renewcommand{\thefigure}{\arabic{section}-\arabic{figure}} 
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
@@ -71,55 +72,81 @@ CMAQ是一种三维欧拉大气化学与传输模拟系统，经由对污染物�
 \end{figure}
 
 \subsection{问题提出}
-\textbf{问题1}使用附件1数据，计算监测点A从2020年8月25日到8月28日每天实测的AQI和首要污染物。
+\textbf{问题1}使用附件1数据，计算监测点A从2020年8月25日到8月28日每天实测的AQI和首要污染物。并将结果按照表\ref{tab:table1-1}格式放于正文中
+\begin{table}[h!]
+	\caption{AQI计算结果表}\label{tab:table1-1}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\multirow{2}{*}{检测日期}&\multirow{2}{*}{地点}&\multicolumn{2}{|c|}{AQI计算} \\
+			\cline{3-4}
+			& &AQI&首要污染物\\
+			\hline
+			2020/8/25&监测点A&&\\
+			\hline
+			2020/8/26&监测点A&&\\
+			\hline
+			2020/8/27&监测点A&&\\
+			\hline
+			2020/8/28&监测点A&&\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
 
 \textbf{问题2}使用附件1中的数据，根据对污染物浓度的影响程度，对气象条件进行合理分类，并阐述各类气象条件的特征。
 
-\textbf{问题3}使用附件1和2的数据，建立适用3个监测点（忽略彼此影响）的二次预报数学模型，预测未来3天6种污染物浓度，要求预测结果AQI最大相对误差尽量小，首要污染物预测准确度尽量高。并用该模型预测ABC的2021年7月13到7月15的污染物浓度，计算AQI和首要污染物。
 
-\textbf{问题4}使用附件1和3数据建立区域协同预报模型，包含A,A1,A2,A3四个监测点。要求预测结果AQI最大相对误差尽量小，首要污染物预测准确度尽量高。使用该协同预报模型预测监测点A、A1、A2、A3在2021年7月13日至7月15日的污染物浓度，计算AQI和首要污染物，并且讨论协同预报模型是否能提升准确度。
+\textbf{问题3}使用附件1和2的数据，建立适用3个监测点（忽略彼此影响）的二次预报数学模型，预测未来3天6种污染物浓度，要求预测结果AQI最大相对误差尽量小，首要污染物预测准确度尽量高。并用该模型预测ABC的2021年7月13到7月15的污染物浓度，计算AQI和首要污染物。将结果按照表\ref{tab:table1-2}的格式放于正文中
+\begin{table}[h!]
+	\caption{AQI计算结果表}\label{tab:table1-2}
+	\begin{center}
+	\resizebox{.95\columnwidth}{!}{
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			\multirow{2}{*}{预报日期}&\multirow{2}{*}{地点}&\multicolumn{8}{|c|}{二次模型日值预测} \\
+			\cline{3-10}
+			& &SO2(μg/m³)&NO2(μg/m³)&PM10(μg/m³)&PM2.5(μg/m³)&O3最大八小时滑动平均(μg/m³)&CO(mg/m³)&AQI&首要污染物\\
+			\hline
+			2020/7/13&监测点A&&&&&&&&\\
+			\hline
+			2020/7/14&监测点A&&&&&&&&\\
+			\hline
+			2020/7/15&监测点A&&&&&&&&\\
+			\hline
+		\end{tabular}
+	}
+	\end{center}
+\end{table}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.7\textwidth]{test.jpg}
-\caption{对雷达实施距离多假目标欺骗干扰示意图}
-\label{fig1}
-\end{figure}
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.7\textwidth]{test.jpg}
-\caption{对雷达实施距离多假目标欺骗干扰示意图}
-\label{fig1}
-\end{figure}
 
-\section{模型假设}
-模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设模型假设。
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.7\textwidth]{test.jpg}
-\caption{对雷达实施距离多假目标欺骗干扰示意图}
-\label{fig1}
-\end{figure}
+\textbf{问题4}使用附件1和3数据建立区域协同预报模型，包含A,A1,A2,A3四个监测点。要求预测结果AQI最大相对误差尽量小，首要污染物预测准确度尽量高。使用该协同预报模型预测监测点A、A1、A2、A3在2021年7月13日至7月15日的污染物浓度，计算AQI和首要污染物。将结果按照表\ref{tab:table1-2}的格式放于正文中。并讨论协同预报模型是否能提升准确度。
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.7\textwidth]{test.jpg}
-\caption{对雷达实施距离多假目标欺骗干扰示意图}
-\label{fig1}
-\end{figure}
+\section{背景阐述、模型合理假设以及符号说明}
+\subsection{背景阐述}
+在该问题中，涉及到很多与不同领域有关的背景知识，在本节中对部分背景信息进行详细的阐述
+以下分别介绍每种气象条件因素的定义：
+\begin{itemize}
+	\item 温度是表示物体冷热程度的物理量，微观上来讲是物体分子热运动的剧烈程度。温度只能通过物体随温度变化的某些特性来间接测量，而用来量度物体温度数值的标尺叫温标。在本文中，使用的温标为摄氏温标(°C)。本文中，将该变量简称为T。
+	\item 比湿是空气中的水汽质量在混合空气中的质量占比，即
+	$$\rm H≡\frac{m_v}{m_v+m_a}$$
+	式中，H为比湿，无量纲；$\rm m_v$为空气中的水汽质量，单位：kg；$\rm m_a$为干空气质量，单位：kg。在本文中将该变量简称为H。
+	\item 气压是作用在单位面积上的大气压力，即在数值上等于单位面积上向上延伸到大气上界的垂直空气柱所受到的重力。在本文中，使用单位为MPa, 1MPa = 1000000pa。将该变量简称为P。
+	\item 风速是指空气相对于地球某一固定地点的运动速率，本文中使用的单位是m/s，1m/s=3.6km/h。本文将该变量简称为WS。
+	\item 风向是指风的来向，本题用角度表示。定义自正北方向至监测点的风向为0°风向，以顺时针旋转角（单位：°）为正值记录风向。例如，风自正东方向至监测点时，记录此时段风向为90°。本文将该变量简称为WD。
+\end{itemize}
+\subsection{模型合理假设}
+a.假设本题涉及到的所有大气科学相关变量（气象条件或是污染物浓度等）在自然界都是连续变量
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.7\textwidth]{test.jpg}
-\caption{对雷达实施距离多假目标欺骗干扰示意图}
-\label{fig1}
-\end{figure}
-\section{符号说明}
-符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明符号说明。
+b.在一段连续时间内，由工业、生活等人类日常行为产生的污染物排放浓度大致不变
+
+c.
+\subsection{符号说明}
+
 \section{问题的分析}
-\subsection{问题一的分析与求解}
-\subsubsection{问题一的描述与分析}
-问题一中提到的AQI即为空气质量指数，该数据可用于判别空气质量等级。AQI的计算方式如下：
+\subsection{问题一：通过给定污染物数据计算当日的AQI指数}
+\subsubsection{AQI指数计算方式与相关背景}
+AQI即为空气质量指数，该数据可用于判别空气质量等级。AQI的计算方式如下：
 首先需得到各项污染物的空气质量分指数（IAQI），其计算公式如公式(1)所示：
 \begin{equation}
 	\rm IAQI_P = \frac{IAQI_{Hi}-IAQI_{Lo}}{BP_{Hi}-BP_{Lo}}*(C_P-BP_{Lo})+IAQI_{Lo}
@@ -195,13 +222,13 @@ CMAQ是一种三维欧拉大气化学与传输模拟系统，经由对污染物�
 当AQI大于50时，IAQI最大的污染物为首要污染物。若IAQI最大的污染物为两项或两项以上时，并列为首要污染物
 IAQI大于100的污染物为超标污染物。
 则求解问题一需要根据附件1中提供的“监测点A逐日污染物浓度数据”表，通过上述方法计算监测点A从2020年8月25日到8月28日每天实测的AQI和首要污染物。
-\subsubsection{问题一的求解}
-问题一的求解过程较为简单，但是为了后期处理方便以及增强代码的可重用性，我们采用直接完全处理附件1中的“监测点A逐日污染物浓度数据”表的方式。在得到整个表的结果后，找出题目中的日期范围对应的结果。处理整个表格的流程图如\ref{fig4-1}所示：
+\subsubsection{快速求解AQI指数算法及对应结果}
+求解AQI指数的过程非常简单，但是我们为了后期处理的方便性以及增强代码的可重用性，我们采用直接完全处理附件1中的“监测点A逐日污染物浓度数据”表的方式。在得到整个表的结果后，找出题目中的日期范围对应的结果。处理整个表格的流程图如图\ref{fig3-1}所示：
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.7\textwidth]{figures//fig4-1.png}
+	\includegraphics[width=.7\textwidth]{figures//fig3-1.png}
 	\caption{完全处理“监测点A逐日污染物浓度数据”表流程图}
-	\label{fig4-1}
+	\label{fig3-1}
 \end{figure}
 
 计算得到的结果如表\ref{tab:table4-3}所示
@@ -226,13 +253,150 @@ IAQI大于100的污染物为超标污染物。
 	\end{center}
 \end{table}
 
-\subsection{问题二 xxx}
-\subsubsection{问题描述和分析}
-问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析。
-\subsubsection{模型建立与求解}
-模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解。
+\subsection{问题二 根据对污染物浓度的影响程度，对气象条件进行分类}
+\subsubsection{问题分析与数据预处理}
+根据附件1中“监测点A逐小时污染物浓度与气象实测数据”表的数据，我们可以得到可能对污染物浓度产生影响的气象条件因素有5种：温度，比湿，气压，风速与风向。其具体定义
 
-\subsection{问题三 xxx}
+在污染物排放情况不变的条件下，某一地区的气象条件有利于污染物扩散或沉降时，该地区的AQI会下降，反之会上升。分析出，在不同气象条件下的AQI指数可以很好地反应气象条件对污染物浓度的影响。与此同时，也要分别分析6种污染物(CO,NO2,SO2,O3,PM10,PM2.5)在不同气象条件下的浓度变化情况。因此，首先计算AQI变量与各个污染物变量的相关性,然后通过主客观集成赋权法得到6种污染物浓度分别对我们最终定义的污染物浓度变量(称为AP)的影响权重。再通过各个污染物成为首要污染物的比例，对影响权重进行修正。最后建模得到气象因素对AP的影响，我们可以将气象条件因素分为三类：有较为显著的单向影响因素，有较为显著的双向影响因素，无显著影响因素。对三种类别的解释如下：
+\begin{itemize}
+	\item 有较为显著的单向影响因素类别的主要表现为：随着该因素变量值的上升，对AP的影响是单方面的（无论是正相关抑或是负相关），例如随着该因素变量的上升，AP指数不断下降。
+	\item 有较为显著的双向影响因素类别的主要表现为：随着该因素变量值的上升，对AP的影响是双方面的，例如在某个区间内，该因素的上升AP指数的下降，但在另一个区间内，该因素的上升导致AP指数的上升。
+	\item 无显著影响因素类别的主要表现为：随着该因素变量的改变，对AP指数没有显著的影响。
+\end{itemize}
+
+在正式建立模型之前，对表格数据进行如下预处理：
+
+（1）填补缺失数据：
+由于受监测数据权限及相应监测设备功能等的限制，部分气象指标的实测数据无法获得，因此在表格中存在着部分数据缺失的情况。
+
+本文采用线性插值的方式，用于填补表格中的缺失数据。线性插值是指插值函数为一次多项式的插值方式，其在插值节点上的插值误差为零。线性插值相比其他插值方式，如抛物线插值，具有简单、方便的特点。线性插值的几何意义即为图\ref{fig3-2}中利用过A点和B点的直线来近似表示原函数。线性插值可以用于近似代替原函数，也可以用于计算得到查表过程中表中缺失的数值。
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.7\textwidth]{figures//fig3-2.png}
+	\caption{线性插值示意图}
+	\label{fig3-2}
+\end{figure}
+
+如图\ref{fig3-2}所示，设函数$\rm y = f(x)$在$\rm x_0$，$\rm x_1$点的取值分别为$\rm y_0$，$\rm y_1$，求多项式
+$$\rm y = φ_1(x) = a_0+a_1x$$
+使满足
+$$\rm φ_1(x_0) = y_0, φ_1(x1) = y_1 $$
+由解析几何易得：
+$$\rm y = φ_1(x) = y_0 +\frac{y_1-y_0}{x_1-x_0}(x-x_0)	$$
+使用线性插值法可以填补表中的缺失值，并在之后的处理过程中将插入值作为缺失值的替代
+
+（2）通过污染物浓度计算AQI指数：
+AQI指数的计算方法在问题一中已经进行阐述，此处不再赘述。对每个小时的污染物浓度数据，都可以计算出其相应的AQI指数。
+
+（3）数据的标准化和归一化：
+由于数据的量纲不同，我们需要对污染物浓度数据进行标准化，并对气象因素数据进行归一化。标准化原始变量数据采用如公式(3)方式：
+\begin{equation}
+	\rm ZX_i = \frac{X_i-μ}{δ}, μ = \frac{1}{n}\sum_{i=1}^{n}X_i, δ = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(X_i-μ)^2}
+\end{equation}
+将标准化之后AQI,SO3,NO2,O3,PM10,PM2.5,CO变量对应的新变量分别命名为ZAQI,ZSO3,ZNO2,ZO3,ZPM10,ZPM2.5,ZCO。
+
+对于气象数据，对其进行归一化操作，归一化原始变量数据采用如公式(4)所用方式:
+\begin{equation}
+	\rm G_i = \frac{X_i}{max(X1,X2,...,X_n)}
+\end{equation}
+
+\subsubsection{模型建立、求解与验证}
+（1）Person相关系数分析
+
+在本题中，研究变量之间的相关性采用Pearson相关系数进行分析。Pearson相关系数是用来衡量两个数据集合是否在一条线上面，它用来衡量定距变量间的线性关系的一种评价指标。当两个变量都是正态连续变量，而且两者之间呈线性关系时，表现这两个变量之间相关程度用积差相关系数，主要有Pearson简单相关系数。
+其计算方式如公式(4)所示：
+\begin{equation}
+	\rm r = \frac{N\sum{x_iy_i}-\sum{x_i}\sum{y_i}}{\sqrt{N\sum{x_i^2}-(\sum{x_i})^2}\sqrt{N\sum{y_i^2}-(\sum{y_i})^2}}
+\end{equation}
+Pearson相关系数衡量的是线性相关关系。若r=0，只能说x与y之间无线性相关关系，不能说无相关关系。相关系数的绝对值越大，相关性越强：相关系数越接近于1或-1，相关度越强，相关系数越接近于0，相关度越弱。
+此处使用Python和SPSS统计软件，分析ZAQI,ZNO2,ZSO3,ZO3,ZCO,ZPM10,ZPM2.5之间的Person相关性的步骤如下：
+\ding{172} 使用Python对Excel数据进行处理，通过线性插值填补缺失值，并计算出每一行对应的AQI指数
+
+\ding{173} 使用SPSS软件导入Excel数据
+
+\ding{174} 通过SPSS软件，点击分析→描述统计→描述，选择AQI等7个变量，并将标准化之后的变量另存为变量ZAQI等变量，
+
+\ding{175} 通过SPSS软件，点击相关→双变量，选择ZAQI、ZCO等6个变量，得到其Pearson相关系数矩阵
+
+其相关系数矩阵如图\ref{fig3-3}所示：
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.7\textwidth]{figures//fig3-3.png}
+	\caption{ZAQI变量Person相关矩阵示意图}
+	\label{fig3-3}
+\end{figure}
+
+（2）通过Critic赋权法和主观调整确定AP表达式
+
+确定某种变量的权重主要有两大类：一类是主观权重赋值法，例如AHP、专家评分法等；还有一类就是客观权重赋权法，比较典型的就是Critic赋值法。
+Critic赋值法以两个基本概念为基础：一是对比强度，借鉴标准离差法的思想，认为若同一指标的所有评价指数差别越大，即标准差越大，则所蕴含的信息量越大；二是评价指标之间的冲突性，指标之间的冲突性是以指标之间的相关系数为基础，如两个指标之间具有较强的正相关，说明两个指标冲突性较低。第j个指标与其它指标的冲突性的量化指标$\rm \sum_{i=1}^{n}(1-r_{ij})$，其中$\rm r_{ij}$评价指标i和j之间的相关系数。各个指标的客观权重确定就是以对比强度和冲突性来综合衡量的。设$\rm C_j$表示第j个评价指标所包告的信息量。$\rm C_j$的计算式如下：
+$$
+\rm C_j=δ_j \sum_{i=1}^{n}1-r_{ij}     
+$$
+其中n为同一指标的评价数量。一般地，$\rm C_j$越大，第j个评价指标所包含的信息量越大，则该指标的相对重要性也就越大。
+
+设$\rm W_j$为第j个指标的客观权重。$\rm W_j$的计算公式：$\rm W_j=\frac{C_j}{\sum_{i=1}^{m}C_i} $（m为所有指标的数量）
+通过Critic赋权法可以计算出对于自定义因变量AP关于ZNO2等变量的权重，最后通过加权求和的方式得到最终的计算公式：
+\begin{equation}
+	\rm AP = \sum_{i=1}^{n}W_iZX_i
+\end{equation}
+该过程的数学解释为：通过计算AQI与6中污染物的相关性，反映了不同的污染物，其浓度变化对AQI变化的影响，对AQI变化影响较大的污染物，赋予更高的权重。
+通过Python程序，计算出的权重表如表\ref{tab:table4-4}所示：（精确至小数点后三位）
+\begin{table}[h!]
+	\caption{AP权重计算结果表}\label{tab:table4-4}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			变量名&权重&变量名&权重&变量名&权重 \\
+			\hline
+			ZSO2&0.127&ZNO2&0.163&ZPM10&0.215 \\
+			\hline
+			ZPM2.5&0.212&ZO3&0.142&ZCO& 0.142\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+但是主观上认为直接使用该权重有一定的误差，因为在对监测点A逐小时污染数据处理计算AQI值和首要污染物之后，发现污染物CO和SO2成为首要污染物的比例非常低，甚至没有任何一个小时其SO2污染物为首要污染物。通过引入各个污染物成为首要污染物的比例，来略微修正各个变量的权重值。使用如下计算方式：
+\begin{equation*}
+	\rm newW_i = 0.6*W_i+0.4*P_i       P_i = \frac{T_i}{\sum{T_i}}
+\end{equation*}
+其中$\rm T_i$表示第i中污染物成为首要污染物的次数
+
+进行修正之后得到的权重表如表所示：
+\begin{table}[h!]
+	\caption{AP权重计算结果表}\label{tab:table4-4}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			变量名&权重&变量名&权重&变量名&权重 \\
+			\hline
+			ZSO2&0.076&ZNO2&0.260&ZPM10&0.226 \\
+			\hline
+			ZPM2.5&0.165&ZO3&0.182&ZCO&0.091\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+则有AP计算公式如下所示
+\begin{equation*}
+	\rm AP = 0.076*ZSO_2+0.260*ZNO_2+0.226*ZPM_{10}+0.165*ZPM_{2.5}+0.182*ZO_3+0.091*ZCO
+\end{equation*}
+
+（3）分析AP与气象条件因素的相关性并统计AP在某种气象条件下的平均值变化率
+	通过SPSS软件直接定义新变量AP，通过定义计算表达式计算出AP的取值。然后对变量AP,ZT,ZH,ZP,ZWS,ZWD进行相关性分析，得到相关性矩阵如图\ref{fig3-4}所示：
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=.7\textwidth]{figures//fig3-4.png}
+		\caption{变量AP的Person相关系数矩阵}
+		\label{fig3-4}
+	\end{figure}
+	
+	从\ref{fig3-4}中我们可以看出，变量ZWD（即标准化之后的风速变量）对
+（4）将原始污染浓度数据可视化进行模型的验证
+
+\subsection{问题三 依据一次预报数据和实测数据进行气象二次预报}
 \subsubsection{问题描述和分析}
 问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析。
 \subsubsection{模型建立与求解}
