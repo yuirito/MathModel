@@ -147,7 +147,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \setmainfont{Times New Roman}
 \setmonofont{Courier New}
 \setsansfont{Arial}
-\setCJKmainfont[AutoFakeBold = {2.15},ItalicFont={KaiTi}]{SimSun}
+\setCJKmainfont[AutoFakeBold = {2.15},ItalicFont={Kaiti SC}]{SimSong}
 
 \setCJKfamilyfont{xw}{STXinwei}
 
