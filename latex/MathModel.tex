@@ -3,6 +3,8 @@
 \usepackage{multirow}
 \usepackage{threeparttable}
 \usepackage{pifont}
+\usepackage{caption}
+\usepackage{subcaption}
 \numberwithin{figure}{section}
 \renewcommand{\thefigure}{\arabic{section}-\arabic{figure}} 
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
@@ -509,23 +511,78 @@ $$
 	\caption{LSTM模型输入。我们按图中所示的方式把三天（72小时）的实测数据输入到LSTM模型中进行训练。}
 	\label{LSTM-INPUT}
 \end{figure}
-我们先运用LSTM对实际的污染物浓度（6种）+气象条件（5种）按照每三天（72小时实测数据）一次，进行训练，随后把一次模型预测的数据（11种）按三天取平均。例如：2020年7月23号的模型预测23，24和25号的11种数据取平均后做为一次模型2020-07-23的预测值。在确保预测数据和实测数据的日期一致后，如图\ref{model}所示，把经过预处理的预测数据接入到已经用实测数据训练好的LSTM模型里，最后直接输出18个数据，每6个为一天的预测污染物浓度。
-\begin{figure}[!h]
+我们先运用LSTM对实际的污染物浓度（6种）+气象条件（5种）按照每三天（72小时实测数据）一次，进行训练，随后把一次模型预测的数据（11种）按三天取平均。例如：2020年7月23号的模型预测23，24和25号的11种数据取平均后做为一次模型2020-07-23的预测值。在确保预测数据和实测数据的日期一致后，如图所示，把经过预处理的预测数据接入到已经用实测数据训练好的LSTM模型里，最后直接输出18个数据，每6个为一天的预测污染物浓度。
+
+\begin{figure}
 	\centering
-	\includegraphics[width=.7\textwidth]{model.jpg}
+	\begin{subfigure}[ht]{.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{model.jpg}
+	\end{subfigure}
+	\begin{subfigure}[ht]{.4\textwidth}
+		\includegraphics[width=\textwidth]{figures/model_2.jpg}
+	\end{subfigure}
 	\caption{二次预测模型。通过LSTM对实测数据进行学习后接入一次模型预测的数据来提升预测准确度。最后直接输出三天的污染物浓度。}
 	\label{model}
 \end{figure}
 
+\begin{table}[h!]
+	\caption{污染物浓度及AQI预测结果}\label{tab: AQI_Pre}
+	\begin{center}
+	\resizebox{.95\columnwidth}{!}{
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			\multirow{2}{*}{预报日期}&\multirow{2}{*}{地点}&\multicolumn{8}{|c|}{二次模型日值预测} \\
+			\cline{3-10}
+			& &SO2(μg/m³)&NO2(μg/m³)&PM10(μg/m³)&PM2.5(μg/m³)&O3最大八小时滑动平均(μg/m³)&CO(mg/m³)&AQI&首要污染物\\
+			\hline
+			2020/7/13&监测点A&6.06&43.60&41.28&35.92&86.76&0.73&55&NO2\\
+			\hline
+			2020/7/14&监测点A&7.90&41.13&53.02&22.39&46.77&0.61&52&NOP2\&PM10\\
+			\hline
+			2020/7/15&监测点A&9.80&42.16&54.02&48.52&48.61&1.10&67&PM2.5\\
+			\hline
+			\hline
+			2020/7/13&监测点B&6.06&43.60&41.28&35.92&86.76&0.73&55&NO2\\
+			\hline
+			2020/7/14&监测点B&7.90&41.13&53.02&22.39&46.77&0.61&52&NOP2\&PM10\\
+			\hline
+			2020/7/15&监测点B&9.80&42.16&54.02&48.52&48.61&1.10&67&PM2.5\\
+			\hline
+			2020/7/13&监测点C&6.06&43.60&41.28&35.92&86.76&0.73&55&NO2\\
+			\hline
+			2020/7/14&监测点C&7.90&41.13&53.02&22.39&46.77&0.61&52&NOP2\&PM10\\
+			\hline
+			2020/7/15&监测点C&9.80&42.16&54.02&48.52&48.61&1.10&67&PM2.5\\
+			\hline
+		\end{tabular}
+	}
+	\end{center}
+\end{table}
 \subsection{问题四：建立区域协同模型提高预测精度}
 \subsubsection{问题描述和分析}
-问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析问题的分析。
+因为相邻区域之间的污染物通常具有相关性，因此通过建立一个多区域的协同模型能够提高预测精度。我们利用附件1和3中，监测点A，A1，A2和A3的一次模型预测数据和实测数据再加上问题三中已经训练好了模型，我们只用在原来的训练集上再加上监测点A1，A2和A3与监测点A组成一层，然后再加上一个卷积层来把4个监测站的数据关联起来进行协同训练。
 \subsubsection{模型建立与求解}
-模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解模型建立与求解。
-
+我们在问题三的基础上加上了A1-A3三个监测点的小时级实测数据与监测点A的小时级实测数据一并放到LSTM中进行模型的预训练，然后再把四个监测点的一次模型预测数据连接到LSTM上，再加上一个4X1的卷积核进行降维，最后输出72个神经元，分别作为4个监测点3天的六种污染物浓度。
 \section{模型的评价}
 \subsection{模型的优点}
-模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点模型的优点。
+我们的模型可以从实测历史数据中不断学习，大大提高了臭氧（O3）的预测准确度，进而提升了AQI及主要污染物的预测精度。除此之外，我们的模型易于训练，可扩展性强，能够泛化到不同的问题上。在问题三中，我们预测的不同监测点的AQI的精确度平均提升了2倍以上，，对臭氧的预测准确度提升了近10倍。
+\begin{figure}
+	\centering
+	\begin{subfigure}[ht]{.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figures/model_loss.png}
+		\caption{监测点A模型LOSS}
+		\label{A_model_loss}
+	\end{subfigure}
+	\begin{subfigure}[ht]{.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figures/model_loss_B.png}
+		\caption{监测点B模型LOSS}
+		\label{B_model_loss}
+	\end{subfigure}
+	\caption{不同监测点的Model Loss}
+\end{figure}
 \subsection{模型的缺点}
 模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点模型的缺点。
 
