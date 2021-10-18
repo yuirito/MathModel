@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{\numberline {3\,.\,4\,.\,1}问题描述和分析}{21}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3\,.\,4\,.\,2}数据预处理}{22}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3\,.\,4\,.\,3}模型建立与求解}{22}{subsubsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3\,.\,4\,.\,4}模型评估与协同作用讨论}{23}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3\,.\,4\,.\,4}模型评估与协同作用讨论}{22}{subsubsection.3.4.4}%
 \contentsline {section}{\numberline {4.}模型的评价}{23}{section.4}%
 \contentsline {subsection}{\numberline {4\,.\,1}模型的优点}{23}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4\,.\,2}模型的缺点}{23}{subsection.4.2}%
