@@ -1,27 +1,28 @@
 \contentsline {section}{\numberline {1.}问题重述}{3}{section.1}%
 \contentsline {subsection}{\numberline {1\,.\,1}问题背景}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1\,.\,2}问题提出}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2.}背景阐述、模型合理假设以及符号说明}{5}{section.2}%
-\contentsline {subsection}{\numberline {2\,.\,1}背景阐述}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2\,.\,2}模型合理假设}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {1\,.\,2}问题提出}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2.}背景阐述、模型合理假设以及符号说明}{4}{section.2}%
+\contentsline {subsection}{\numberline {2\,.\,1}背景阐述}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2\,.\,2}模型合理假设}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2\,.\,3}符号说明}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3.}问题的分析}{6}{section.3}%
-\contentsline {subsection}{\numberline {3\,.\,1}问题一：通过给定污染物数据计算当日的AQI指数}{6}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3\,.\,1\,.\,1}AQI指数计算方式与相关背景}{6}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3\,.\,1\,.\,2}快速求解AQI指数算法及对应结果}{7}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3\,.\,2}问题二 根据对污染物浓度的影响程度，对气象条件进行分类}{7}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3\,.\,2\,.\,1}问题分析与数据预处理}{7}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3\,.\,2\,.\,2}模型建立、求解与验证}{9}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3\,.\,3}问题三 依据一次预报数据和实测数据进行气象二次预报}{11}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3\,.\,3\,.\,1}问题描述和分析}{11}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3\,.\,3\,.\,2}模型建立与求解}{11}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3\,.\,4}问题四 xxx}{12}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3\,.\,4\,.\,1}问题描述和分析}{12}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3\,.\,4\,.\,2}模型建立与求解}{12}{subsubsection.3.4.2}%
-\contentsline {section}{\numberline {4.}模型的评价}{12}{section.4}%
-\contentsline {subsection}{\numberline {4\,.\,1}模型的优点}{12}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4\,.\,2}模型的缺点}{12}{subsection.4.2}%
-\contentsline {section}{\numberline {5.}写作参考格式}{13}{section.5}%
-\contentsline {section}{\numberline {6.}参考文献}{13}{section.6}%
-\contentsline {section}{\numberline {附录A}程序代码}{14}{section.1}%
+\contentsline {section}{\numberline {3.}问题的分析}{7}{section.3}%
+\contentsline {subsection}{\numberline {3\,.\,1}问题一：通过给定污染物数据计算当日的AQI指数}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3\,.\,1\,.\,1}AQI指数计算方式与相关背景}{7}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3\,.\,1\,.\,2}快速求解AQI指数算法及对应结果}{8}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3\,.\,2}问题二：根据对污染物浓度的影响程度，对气象条件进行分类}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3\,.\,2\,.\,1}问题分析与数据预处理}{8}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3\,.\,2\,.\,2}模型建立、求解与验证}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3\,.\,2\,.\,3}模型结果归纳}{15}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3\,.\,3}问题三：依据一次预报数据和实测数据进行气象二次预报}{16}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3\,.\,3\,.\,1}问题描述和分析}{16}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3\,.\,3\,.\,2}数据预处理}{16}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3\,.\,3\,.\,3}模型建立与求解}{17}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3\,.\,4}问题四：建立区域协同模型提高预测精度}{18}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3\,.\,4\,.\,1}问题描述和分析}{18}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3\,.\,4\,.\,2}模型建立与求解}{18}{subsubsection.3.4.2}%
+\contentsline {section}{\numberline {4.}模型的评价}{18}{section.4}%
+\contentsline {subsection}{\numberline {4\,.\,1}模型的优点}{18}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4\,.\,2}模型的缺点}{19}{subsection.4.2}%
+\contentsline {section}{\numberline {5.}参考文献}{19}{section.5}%
+\contentsline {section}{\numberline {附录A}程序代码}{20}{section.1}%
 \contentsfinish 
