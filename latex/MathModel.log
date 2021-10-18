@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.12) (preloaded format=xelatex 2021.1.18)  18 OCT 2021 10:33
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.12) (preloaded format=xelatex 2021.1.18)  18 OCT 2021 10:36
 entering extended mode
 **./MathModel.tex
 (MathModel.tex
@@ -1127,34 +1127,7 @@ Package fontspec Info: Font family 'LiSu(0)' created for font 'LiSu' with
 LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
 (Font)              using `TU/SimHei(0)/m/n' instead on input line 44.
 
-(MathModel.toc)
-\tf@toc=\write5
-\openout5 = `MathModel.toc'.
-
- [3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 48.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00792pt
-(hyperref)                removed on input line 48.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 48.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00792pt
-(hyperref)                removed on input line 48.
-
-
-LaTeX Warning: Citation `ref1' on page 4 undefined on input line 51.
-
-File: figures//fig1-1.png Graphic file (type bmp)
-<figures//fig1-1.png>
+(MathModel.toc
 
 Package fontspec Info: Could not resolve font "SimSun/BI" (it probably doesn't
 (fontspec)             exist).
@@ -1178,24 +1151,37 @@ Package fontspec Info: Font family 'SimSun(2)' created for font 'SimSun' with
 (fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
+)
+\tf@toc=\write5
+\openout5 = `MathModel.toc'.
+
+ [3]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 48.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 48.
+
+File: figures//fig1-1.png Graphic file (type bmp)
+<figures//fig1-1.png>
 
 LaTeX Font Warning: Font shape `TU/SimSun(2)/b/n' undefined
 (Font)              using `TU/SimSun(2)/m/n' instead on input line 55.
 
-
-LaTeX Warning: Citation `ref2' on page 4 undefined on input line 55.
-
-
-LaTeX Warning: Citation `ref2' on page 4 undefined on input line 55.
-
 File: figures//fig1-2.png Graphic file (type bmp)
 <figures//fig1-2.png>
-
-LaTeX Warning: Citation `ref3' on page 4 undefined on input line 61.
-
-
-LaTeX Warning: Citation `ref3' on page 4 undefined on input line 61.
-
 File: figures//fig1-3.png Graphic file (type bmp)
 <figures//fig1-3.png>
 
@@ -1238,19 +1224,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00792pt
 (hyperref)                removed on input line 125.
 
-[5]
-
-LaTeX Warning: Citation `ref3' on page 6 undefined on input line 145.
-
-[6]
+[5] [6]
 File: figures//fig2-1.png Graphic file (type bmp)
 <figures//fig2-1.png>
-
-
-LaTeX Warning: Citation `ref5' on page 7 undefined on input line 165.
-
-
-LaTeX Warning: Citation `ref5' on page 7 undefined on input line 165.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1912,9 +1888,6 @@ File: figures//cnn_lstm_input.png Graphic file (type bmp)
 <figures//cnn_lstm_input.png>
 [22]
 
-LaTeX Warning: Reference `tab:pol_mse' on page 23 undefined on input line 685.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 703.
 
@@ -1951,34 +1924,128 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 703.
 
 
-LaTeX Warning: Reference `tab:cov_every_pol_mse' on page 23 undefined on input 
-line 704.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[23]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 789.
+
+File: figures/model_loss.png Graphic file (type bmp)
+<figures/model_loss.png>
+File: figures/model_loss_B.png Graphic file (type bmp)
+<figures/model_loss_B.png>
+File: figures/Model_loss_C.png Graphic file (type bmp)
+<figures/Model_loss_C.png>
+File: figures/modelCov_A.jpg Graphic file (type bmp)
+<figures/modelCov_A.jpg>
+File: figures/modelCov_A1.jpg Graphic file (type bmp)
+<figures/modelCov_A1.jpg>
+File: figures/modelCov_A2.jpg Graphic file (type bmp)
+<figures/modelCov_A2.jpg>
+File: figures/modelCov_A3.jpg Graphic file (type bmp)
+<figures/modelCov_A3.jpg>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 871.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 871.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 871.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 871.
+
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 925--926
+[]\TU/SimSun(2)/m/n/12.045 陈 敏 东\TU/TimesNewRoman(0)/m/n/12.045 . \TU/SimSun(2)
+/m/n/12.045 大 气 臭 氧 污 染 形 成 机 制 及 研 究 进 展 \TU/TimesNewRoman(0)/m/n/12.045 [J/OL
+] 2018,
+ []
+
+[26]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 945.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 945.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 945.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00792pt
+(hyperref)                removed on input line 945.
+
+("C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Runaway argument?
-{ \begin {tabular}[ht]{|c|c|c|c|c|c|c|c|c|} \hline 模型 & SO2($\mu \ETC.
-! File ended while scanning use of \Gscale@box@dd.
-<inserted text> 
-                \par 
-<*> ./MathModel.tex
-                   
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
 
-! Emergency stop.
-<*> ./MathModel.tex
-                   
-*** (job aborted, no legal \end found)
+Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
 
- 
+
+Package fontspec Info: Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+ [27] [28] [29]
+(MathModel.aux)
+Package rerunfilecheck Info: File `MathModel.out' has not changed.
+(rerunfilecheck)             Checksum: C02271B3271560A7DC67B100EBE20E27;4976.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(\end occurred when \iftrue on line 21 was incomplete) 
 Here is how much of TeX's memory you used:
- 20824 strings out of 412095
- 413138 string characters out of 2851369
- 771246 words of memory out of 3000000
- 40004 multiletter control sequences out of 15000+200000
- 416638 words of font info for 150 fonts, out of 3000000 for 9000
+ 21224 strings out of 412095
+ 421504 string characters out of 2851369
+ 1043994 words of memory out of 3000000
+ 40377 multiletter control sequences out of 15000+200000
+ 416718 words of font info for 160 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 110i,16n,113p,611b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on MathModel.pdf (23 pages).
+ 110i,16n,113p,611b,1976s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on MathModel.pdf (30 pages).
