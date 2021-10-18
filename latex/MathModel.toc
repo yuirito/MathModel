@@ -17,13 +17,14 @@
 \contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}1}问题描述和分析}{18}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}2}数据预处理}{20}{subsubsection.3.3.2}
 \contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}3}模型建立与求解}{20}{subsubsection.3.3.3}
-\contentsline {subsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}4}问题四：建立区域协同模型提高预测精度}{21}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}1}问题描述和分析}{21}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}4}问题四：建立区域协同模型提高预测精度}{20}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}1}问题描述和分析}{20}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}2}数据预处理}{22}{subsubsection.3.4.2}
 \contentsline {subsubsection}{\numberline {3\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}3}模型建立与求解}{22}{subsubsection.3.4.3}
 \contentsline {section}{\numberline {4.}模型的评价}{22}{section.4}
 \contentsline {subsection}{\numberline {4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}1}模型的优点}{22}{subsection.4.1}
-\contentsline {subsection}{\numberline {4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}2}模型的缺点}{23}{subsection.4.2}
+\contentsline {subsection}{\numberline {4\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}2}模型的缺点与改进}{23}{subsection.4.2}
 \contentsline {section}{\numberline {5.}参考文献}{23}{section.5}
-\contentsline {section}{\numberline {附录A}程序代码}{25}{section.1}
+\contentsline {section}{\numberline {附录A}附录}{25}{section.1}
+\contentsline {subsection}{\numberline {1\tmspace +\thinmuskip {.1667em}.\tmspace +\thinmuskip {.1667em}1}附录一：用于处理表格数据，数据填充以及}{25}{subsection.1.1}
 \contentsfinish 
