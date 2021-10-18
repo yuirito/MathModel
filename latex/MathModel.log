@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.12) (preloaded format=xelatex 2021.1.18)  18 OCT 2021 10:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.12) (preloaded format=xelatex 2021.1.18)  18 OCT 2021 10:33
 entering extended mode
 **./MathModel.tex
 (MathModel.tex
@@ -884,7 +884,7 @@ Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 \c@subfigure=\count348
 \c@subtable=\count349
 )
-No file MathModel.aux.
+(MathModel.aux)
 \openout1 = `MathModel.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -907,7 +907,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
-ABD: EverySelectfont initializing macros
+ ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 20.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -1033,10 +1033,6 @@ LaTeX Info: Redefining \nameref on input line 20.
 \@outlinefile=\write4
 \openout4 = `MathModel.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 File: figures//logo.jpeg Graphic file (type bmp)
 <figures//logo.jpeg>
 
@@ -1064,6 +1060,7 @@ Package fontspec Info: Font family 'STXinwei(0)' created for font 'STXinwei'
 
 File: figures//title.pdf Graphic file (type pdf)
 <use figures//title.pdf>
+
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd")
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd")
 Underfull \hbox (badness 10000) in paragraph at lines 21--21
@@ -1130,13 +1127,11 @@ Package fontspec Info: Font family 'LiSu(0)' created for font 'LiSu' with
 LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
 (Font)              using `TU/SimHei(0)/m/n' instead on input line 44.
 
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+(MathModel.toc)
 \tf@toc=\write5
 \openout5 = `MathModel.toc'.
 
-[3]
+ [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 48.
@@ -1157,12 +1152,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 LaTeX Warning: Citation `ref1' on page 4 undefined on input line 51.
-
-
-LaTeX Warning: Reference `fig1-1' on page 4 undefined on input line 51.
-
-
-LaTeX Warning: Reference `fig1-2' on page 4 undefined on input line 51.
 
 File: figures//fig1-1.png Graphic file (type bmp)
 <figures//fig1-1.png>
@@ -1207,9 +1196,6 @@ LaTeX Warning: Citation `ref3' on page 4 undefined on input line 61.
 
 LaTeX Warning: Citation `ref3' on page 4 undefined on input line 61.
 
-
-LaTeX Warning: Reference `fig1-3' on page 4 undefined on input line 65.
-
 File: figures//fig1-3.png Graphic file (type bmp)
 <figures//fig1-3.png>
 
@@ -1233,16 +1219,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00792pt
 (hyperref)                removed on input line 73.
 
-
-LaTeX Warning: Reference `tab:table1-1' on page 4 undefined on input line 74.
-
 [4]
-
-LaTeX Warning: Reference `tab:table1-2' on page 5 undefined on input line 99.
-
-
-LaTeX Warning: Reference `tab:table1-2' on page 5 undefined on input line 122.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 125.
@@ -1262,9 +1239,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 125.
 
 [5]
-
-LaTeX Warning: Reference `fig2-1' on page 6 undefined on input line 145.
-
 
 LaTeX Warning: Citation `ref3' on page 6 undefined on input line 145.
 
@@ -1313,9 +1287,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00792pt
 (hyperref)                removed on input line 181.
-
-
-LaTeX Warning: Reference `tab:table2-1' on page 7 undefined on input line 182.
 
 [7]
 
@@ -1373,9 +1344,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 205.
 
 
-LaTeX Warning: Reference `tab:table4-1' on page 8 undefined on input line 219.
-
-
 Overfull \hbox (190.70877pt too wide) in paragraph at lines 224--253
  [] 
  []
@@ -1384,10 +1352,6 @@ Overfull \hbox (190.70877pt too wide) in paragraph at lines 224--253
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8]
-
-LaTeX Warning: Reference `tab:table4-2' on page 9 undefined on input line 265.
-
-
 Overfull \hbox (74.90749pt too wide) in paragraph at lines 269--276
  [] 
  []
@@ -1428,16 +1392,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00792pt
 (hyperref)                removed on input line 283.
 
-
-LaTeX Warning: Reference `fig3-1' on page 9 undefined on input line 284.
-
 File: figures//fig3-1.png Graphic file (type bmp)
 <figures//fig3-1.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `tab:table4-3' on page 9 undefined on input line 292.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1497,15 +1455,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 315.
 
 [9]
-
-LaTeX Warning: Reference `fig3-2' on page 10 undefined on input line 330.
-
 File: figures//fig3-2.png Graphic file (type bmp)
 <figures//fig3-2.png>
-[10]
-
-LaTeX Warning: Reference `fig3-2' on page 11 undefined on input line 338.
-
+ [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 356.
@@ -1543,20 +1495,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 356.
 
 [11]
-
-LaTeX Warning: Reference `fig3-3' on page 12 undefined on input line 374.
-
 File: figures//fig3-3.png Graphic file (type bmp)
 <figures//fig3-3.png>
-[12]
-
-LaTeX Warning: Reference `tab:table4-4' on page 13 undefined on input line 397.
-
-
-
-LaTeX Warning: Reference `tab:table4-5' on page 13 undefined on input line 419.
-
-
+ [12]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1571,79 +1512,43 @@ cmsy/m/n/12.045 ^^C [][][][] \OT1/cmr/m/n/12.045 + []\OML/cmm/m/it/12.045 :[][]
 t/12.045 :[][][] \OMS/cmsy/m/n/12.045 ^^C [][][]
  []
 
-
-LaTeX Warning: Reference `fig3-4' on page 13 undefined on input line 441.
-
 File: figures//fig3-4.png Graphic file (type bmp)
 <figures//fig3-4.png>
 [13]
-
-LaTeX Warning: Reference `fig3-4' on page 14 undefined on input line 449.
-
-
-LaTeX Warning: Reference `fig3-5' on page 14 undefined on input line 453.
-
 File: figures//fig_WS.png Graphic file (type bmp)
 <figures//fig_WS.png>
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14]
-
-LaTeX Warning: Reference `fig3-6' on page 15 undefined on input line 465.
-
 File: figures//fig_WS_fit.png Graphic file (type bmp)
 <figures//fig_WS_fit.png>
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `fig3-6' on page 15 undefined on input line 473.
-
-
-LaTeX Warning: Reference `fig3-7' on page 15 undefined on input line 479.
 
 File: figures//fig_T_fit.png Graphic file (type bmp)
 <figures//fig_T_fit.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `fig3-7' on page 15 undefined on input line 487.
-
-
-LaTeX Warning: Reference `fig3-8' on page 15 undefined on input line 491.
-
 File: figures//fig_H_fit.png Graphic file (type bmp)
 <figures//fig_H_fit.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `fig3-8' on page 15 undefined on input line 499.
-
 [15]
-
-LaTeX Warning: Reference `fig3-9' on page 16 undefined on input line 503.
-
 File: figures//fig_P_fit.png Graphic file (type bmp)
 <figures//fig_P_fit.png>
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `fig3-9' on page 16 undefined on input line 511.
-
-
-LaTeX Warning: Reference `fig3-10' on page 16 undefined on input line 515.
 
 File: figures//fig_WD_fit.png Graphic file (type bmp)
 <figures//fig_WD_fit.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `fig3-10' on page 16 undefined on input line 523.
 
 [16]
 
@@ -1738,21 +1643,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 554.
 
 [18]
-
-LaTeX Warning: Reference `fig3-11' on page 19 undefined on input line 559.
-
 File: figures//fig3-11.png Graphic file (type bmp)
 <figures//fig3-11.png>
-
-LaTeX Warning: Reference `fig3-12' on page 19 undefined on input line 568.
-
 File: figures//fig3-12.png Graphic file (type bmp)
 <figures//fig3-12.png>
-
-LaTeX Warning: Reference `fig3-13' on page 19 undefined on input line 577.
-
 File: figures//fig3-13.png Graphic file (type bmp)
 <figures//fig3-13.png>
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1841,15 +1738,6 @@ File: LSTM_input.png Graphic file (type bmp)
 <LSTM_input.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `LSTM-INPUT' on page 20 undefined on input line 609.
-
-
-LaTeX Warning: Reference `model' on page 20 undefined on input line 611.
-
-
-LaTeX Warning: Reference `LSTM-INPUT' on page 20 undefined on input line 613.
 
 [20]
 File: model.jpg Graphic file (type bmp)
@@ -2086,11 +1974,11 @@ you'd better type `E' or `X' now and fix your file.
 
  
 Here is how much of TeX's memory you used:
- 20818 strings out of 412095
- 413058 string characters out of 2851369
- 769992 words of memory out of 3000000
- 40002 multiletter control sequences out of 15000+200000
+ 20824 strings out of 412095
+ 413138 string characters out of 2851369
+ 771246 words of memory out of 3000000
+ 40004 multiletter control sequences out of 15000+200000
  416638 words of font info for 150 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 110i,16n,113p,611b,645s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 110i,16n,113p,611b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
 Output written on MathModel.pdf (23 pages).
