@@ -594,6 +594,9 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
 （3）调整表格列数据类型：数据类型的正确与否直接关系到后面对数据的运算，因此在正式运用数据之前需要确保表格列数据类型的正确性。
 
 （4）数据归一化：与问题二采用的标准化策略不同，在LSTM模型的输入中不希望出现负值，因此采用数据归一化对数据进行处理。对已有变量进行归一化的数学过程如下：
+\begin{equation}
+	minX = min\{X_1,X_2,...,X_n\},maxX = max\{X_1,X_2,...,X_n\},NX = \frac{X_i-minX}{maxX-minX}
+\end{equation}
 
 \subsubsection{模型建立与求解}
 \begin{figure}[!h]
@@ -602,9 +605,14 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
 	\caption{LSTM模型输入。我们按图中所示的方式把三天（72小时）的实测数据输入到LSTM模型中进行训练。}
 	\label{LSTM-INPUT}
 \end{figure}
+<<<<<<< HEAD
 我们的预训练模型搭建了一个3层的LSTM对实际的污染物浓度（6种）+气象条件（5种）按照每三天（72小时实测数据）一次，进行训练，每次从day1的8:00开始到72小时后的day4的7:00，将其作为输入如图\ref{LSTM-INPUT}所示，LSTM最后一层经过两个全连接层最后输出18维数据分别代表未来3天每种污染物的浓度，同时以day4,day5,day6三天的污染物浓度作为标签，以MSELoss作为损失函数训练预训练模型。
 
 在微调阶段，我们把一次模型预测的数据（11种）按三天取平均。例如：2020年7月23号的模型预测23，24和25号的11种数据取平均后做为一次模型2020-07-23的预测值。在确保预测数据和实测数据的日期一致后，如图\ref{model}所示，把经过预处理的预测数据接入到已经用实测数据预训练好的LSTM模型里，与一次预报数据拼接经过全连接层最后直接输出18个数据，每6个为一天的预测污染物浓度。同样采用MSELoss作为损失函数训练模型。
+=======
+
+我们先运用LSTM对实际的污染物浓度（6种）+气象条件（5种）按照每三天（72小时实测数据）一次，进行训练，随后把一次模型预测的数据（11种）按三天取平均。例如：2020年7月23号的模型预测23，24和25号的11种数据取平均后做为一次模型2020-07-23的预测值。在确保预测数据和实测数据的日期一致后，如图\ref{LSTM-INPUT}所示，把经过预处理的预测数据接入到已经用实测数据训练好的LSTM模型里，最后直接输出18个数据，每6个为一天的预测污染物浓度。
+>>>>>>> 9a7fa87196c1e2f4108aa6902e23f9ce394e1a8e
 
 \begin{figure}
 	\centering
@@ -629,23 +637,23 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
 			\cline{3-10}
 			& &SO2(μg/m³)&NO2(μg/m³)&PM10(μg/m³)&PM2.5(μg/m³)&O3最大八小时滑动平均(μg/m³)&CO(mg/m³)&AQI&首要污染物\\
 			\hline
-			2020/7/13&监测点A&6.06&43.60&41.28&35.92&86.76&0.73&55&NO2\\
+			2020/7/13&监测点A&6&44&41&36&87&0.7&55&NO2\\
 			\hline
-			2020/7/14&监测点A&7.90&41.13&53.02&22.39&46.77&0.61&52&NO2\&PM10\\
+			2020/7/14&监测点A&8&41&53&22&47&0.6&52&NO2\&PM10\\
 			\hline
-			2020/7/15&监测点A&9.80&42.16&54.02&48.52&48.61&1.10&67&PM2.5\\
+			2020/7/15&监测点A&10&42&54&49&49&1.1&67&PM2.5\\
 			\hline
-			2020/7/13&监测点B&2.09&38.69&92.57&11.58&106.18&0.52&72&PM10\\
+			2020/7/13&监测点B&2&39&93&12&106&0.5&72&PM10\\
 			\hline
-			2020/7/14&监测点B&21.52&19.93&41.09&16.18&49.90&0.53&42&PM10\\
+			2020/7/14&监测点B&22&20&41&16&50&0.5&42&无\\
 			\hline
-			2020/7/15&监测点B&13.48&27.40&64.16&19.99&23.26&0.47&58&PM10\\
+			2020/7/15&监测点B&13&27&64&20&23&0.5&58&PM10\\
 			\hline
-			2020/7/13&监测点C&9.03&31.59&72.48&17.95&-1.87&0.82&62&PM10\\
+			2020/7/13&监测点C&9&32&72&18&2&0.8&62&PM10\\
 			\hline
-			2020/7/14&监测点C&9.12&40.59&49.47&30.22&49.57&1.03&51&NO2\\
+			2020/7/14&监测点C&9&41&50&30&50&1.0&51&NO2\\
 			\hline
-			2020/7/15&监测点C&4.62&16.72&50.68&15.79&20.01&0.80&51&PM10\\
+			2020/7/15&监测点C&5&17&51&16&20&0.8&51&PM10\\
 			\hline
 		\end{tabular}
 	}
@@ -692,6 +700,7 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
 	}
 	\end{center}
 \end{table}
+<<<<<<< HEAD
 \subsubsection{模型评估与协同作用讨论}
 和问题3一样，我们每次使用80\%的样本进行训练，用剩余的样本对模型进行评估，评价指标同问题三，如表\ref{tab:cov_every_pol_mse}所示，可见整体来看，协同预测模型的效果要比一次预报模型和不带协同的二次模型要好，接下来我们着重关注监测点A的各项指标并且我们将问题3中的A数据集上的评估结果与问题4中的进行对比，讨论区域之间的协同作用。
 
@@ -731,15 +740,59 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
 				二次模型 & 13.21 & 584.92 & 705.37 & 629.26 & 1828.01 & 0.16 & 897.86 & 26\%\\
 				\hline
 				二次模型（协同） & 7.60 & 192.86 & 663.87 & 338.66 & 806.87 & 0.11 & 440.91 & 48\%\\
+=======
+
+\begin{table}[h!]
+	\caption{协同预报模型污染物浓度及AQI预测结果}\label{tab: AQI_pre2}
+	\begin{center}
+		\resizebox{.95\columnwidth}{!}{
+			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+				\hline
+				\multirow{2}{*}{预报日期}&\multirow{2}{*}{地点}&\multicolumn{8}{|c|}{二次模型日值预测} \\
+				\cline{3-10}
+				& &SO2(μg/m³)&NO2(μg/m³)&PM10(μg/m³)&PM2.5(μg/m³)&O3最大八小时滑动平均(μg/m³)&CO(mg/m³)&AQI&首要污染物\\
+				\hline
+				2020/7/13&监测点A&7&31&57&25&61&0.8&54&PM10\\
+				\hline
+				2020/7/14&监测点A&6&24&52&28&65&0.7&52&PM10\\
+				\hline
+				2020/7/15&监测点A&8&35&45&25&53&0.8&46&无\\
+				\hline
+				2020/7/13&监测点A1&12&29&95&41&41&1.0&73&PM10\\
+				\hline
+				2020/7/14&监测点A1&11&48&107&23&54&1.1&79&PM10\\
+				\hline
+				2020/7/15&监测点A1&10&66&98&39&27&1.3&83&NO2\\
+				\hline
+				2020/7/13&监测点A2&13&71&95&36&51&1.6&90&NO2\\
+				\hline
+				2020/7/14&监测点A2&13&64&78&38&51&2.6&80&NO2\\
+				\hline
+				2020/7/15&监测点A2&13&67&79&36&52&3.2&82&NO2\\
+				\hline
+				2020/7/13&监测点A3&8&12&6&32&54&0.5&46&无\\
+				\hline
+				2020/7/14&监测点A3&9&16&38&18&33&0.5&38&无\\
+				\hline
+				2020/7/15&监测点A3&7&20&29&21&57&0.6&31&无\\
+>>>>>>> 9a7fa87196c1e2f4108aa6902e23f9ce394e1a8e
 				\hline
 			\end{tabular}
 		}
 	\end{center}
 \end{table}
 
+<<<<<<< HEAD
 如表\ref{tab:cov_pol_mse}所示，在考虑协同作用后建立的区域协同二次模型很好的发挥了区域间协同作用，在评价的各项指标中都优于问题三中不考虑协同的模型。特别是O3和NO2，这两个也是主要污染物的来源，所以主要污染物的判别准确率也随之获得了极大的提升，同时这也是一次预报模型所不足的地方。我们认为区域之间具有很强的关联性，越近的地方造成的影响越大，这种影响是多因素的，例如从邻近区域吹来的风，或者邻近区域的气压等都是造成污染变化的原因，所以考虑区域之间的协同作用能够更好的捕捉这些特征，同时以邻近区域的变化情况也能够指导模型预测本地未来的气象条件和空气污染情况。
+=======
+>>>>>>> 9a7fa87196c1e2f4108aa6902e23f9ce394e1a8e
 \section{模型的评价}
 \subsection{模型的优点}
+
+针对问题一，我们采用的处理方式效率高，代码可重用性强。
+
+针对问题二，采用
+
 我们的模型可以从实测历史数据中不断学习，大大提高了臭氧（O3）的预测准确度，进而提升了AQI及主要污染物的预测精度。除此之外，我们的模型易于训练，可扩展性强，能够泛化到不同的问题上。在问题三中，我们预测的不同监测点的AQI的精确度平均提升了接近2倍，对臭氧的预测准确度提升了近10倍。\\
 从图\ref{model_loss}中可以看出模型在不同的监测点下都能很好的收敛，说明我们的模型的泛化程度很高，能够很好的应对不同监测点的情况。
 \begin{figure}
@@ -787,7 +840,10 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
 	\caption{各监测点AQI的MSE及主要污染物的预测正确率。}\label{tab:pos_AQI}
 \end{table}
 从表\ref{tab:pol_mse}和表\ref{tab:pos_AQI}中可以看出，我们的模型在对各污染物浓度的预测中有一个2-4倍的提升，在对各监测点的AQI的预测中有极大的提升，并且在对主要污染物的预测正确率上也有较大的提高。
-\subsection{模型的缺点}
+\subsection{模型的缺点与改进}
+
+对于问题二的模型，在那个之后
+
 \begin{itemize}
 	\item 对于PM2.5和PM10的估计误差较大。
 	\item 模型对数据格式要求比较严格，只能读入连续的数据，并且要求不同检测地点的数据要同步。
@@ -839,31 +895,173 @@ LSTM(Long Short Term Memory network)神经网络是一种特殊的循环神经�
  赵秋月, 李荔, 李慧鹏. 国内外近地面臭氧污染研究进展 [J]. 环境科技, 2018, 31(05): 72-76.
  \bibitem{ref5}
  陈敏东. 大气臭氧污染形成机制及研究进展 [J/OL] 2018, https://max.book118.com/html/2018/0201/151478594.shtm. 
+ \bibitem{ref6}
+ 伍洲，金辉，韦贵睿. 多目标决策分析中权重确定的主客观赋权法. 南京大学, 2011
+ \bibitem{ref7}
+ 司守奎，孙兆亮. 数学建模算法与应用(第二版). 北京：国防工业出版社, 2015
+ \bibitem{ref8}
+ 洪超. 西安市空气污染特征及重污染天气成因研究. 兰州大学, 2017
+ \bibitem{ref9}
+ Xingjian Shi, Zhourong Chen, Hao Wang, Dit-Yan Yeung.Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting.
+ Department of Computer Science and Engineering Hong Kong University of Science and Technology, 2015
+ \bibitem{ref10}
+ Alex Krizhevsky，I Sutskever，G Hinton. ImageNet Classification with Deep Convolutional Neural Networks. Alex Krizhevsky，I Sutskever，G Hinton, 2012
+ 
 \end{thebibliography}
 
 \newpage
 %附录
 \appendix
-\section{程序代码}
+\section{附录}
 %设置不同语言即可。
-\begin{lstlisting}[language=Matlab] 
-kk=2;[mdd,ndd]=size(dd);
-while ~isempty(V)
-[tmpd,j]=min(W(i,V));tmpj=V(j);
-for k=2:ndd
-[tmp1,jj]=min(dd(1,k)+W(dd(2,k),V));
-tmp2=V(jj);tt(k-1,:)=[tmp1,tmp2,jj];
-end
-tmp=[tmpd,tmpj,j;tt];[tmp3,tmp4]=min(tmp(:,1));
-if tmp3==tmpd, ss(1:2,kk)=[i;tmp(tmp4,2)];
-else,tmp5=find(ss(:,tmp4)~=0);tmp6=length(tmp5);
-if dd(2,tmp4)==ss(tmp6,tmp4)
-ss(1:tmp6+1,kk)=[ss(tmp5,tmp4);tmp(tmp4,2)];
-else, ss(1:3,kk)=[i;dd(2,tmp4);tmp(tmp4,2)];
-end;end
-dd=[dd,[tmp3;tmp(tmp4,2)]];V(tmp(tmp4,3))=[];
-[mdd,ndd]=size(dd);kk=kk+1;
-end; S=ss; D=dd(1,:);
+\subsection{附录一：用于处理表格数据，数据填充以及}
+\begin{lstlisting}[language=Python] 
+from openpyxl import *
+import math
+import xlsxwriter
+import os
+import time
+from datetime import datetime
+
+
+def read_excel(file_name: str, i: int):
+work_book = load_workbook(file_name)
+sheets = work_book.worksheets
+sheet = sheets[i]
+return sheet
+
+
+def parse_sheet(sheet):
+IAQI = [0, 50, 100, 150, 200, 300, 400, 500]
+CO = [0, 2, 4, 14, 24, 36, 48, 60]
+SO2 = [0, 50, 150, 475, 800, 1600, 2100, 2620]
+NO2 = [0, 40, 80, 180, 280, 565, 750, 940]
+O3 = [0, 100, 160, 215, 265, 800]
+PM10 = [0, 50, 150, 250, 350, 420, 500, 600]
+PM25 = [0, 35, 75, 115, 150, 250, 350, 500]
+All = [IAQI, SO2, NO2, PM10, PM25, O3, CO]
+dict = ['SO2', 'NO2', 'PM10', 'PM2.5', 'O3', 'CO']
+
+rows = sheet.rows
+ans = []
+data_ap = []
+rows = list(rows)
+# print(len(rows))
+# 计算IAQ和第一污染物
+for i in range(1, len(rows)):
+row = rows[i]
+col_val = [col.value for col in row]
+# IAQ列表
+IAQIP = []
+date = col_val[0]
+# 计算每一个IAQ
+# 计算是否当前整行没数据，直接扔掉
+cnt = 0
+for j in range(2, 8):
+if isinstance(col_val[j], str):
+cnt += 1
+if cnt == 6:
+ans.append([str(date), None, None])
+cur_data_ap = [None for i in range(6)]
+data_ap.append(cur_data_ap)
+print(str([str(date), None, None])+" "+str(cur_data_ap))
+continue
+cur_data_ap = []
+for j in range(2, 8):
+val = col_val[j]
+if isinstance(val, str):
+# 取得上行数据
+if i == len(rows) - 1:
+k = j - 1
+col_last = [col.value for col in rows[i - 1]]
+val = col_last[j]
+cur_data_ap.append(val)
+po = All[k]
+cur = 0
+while val >= po[cur + 1]:
+cur += 1
+curIAQ = ((IAQI[cur + 1] - IAQI[cur]) / (po[cur + 1] - po[cur])) * (val - po[cur]) + IAQI[cur]
+IAQIP.append(math.ceil(curIAQ))
+# 取得上下行数据
+else:
+k = j - 1
+last = i - 1
+nextI = i + 1
+col_last = [col.value for col in rows[last]]
+while isinstance(col_last[j], str):
+last -= 1
+col_last = [col.value for col in rows[last]]
+col_next = [col.value for col in rows[nextI]]
+while isinstance(col_next[j], str):
+nextI += 1
+col_next = [col.value for col in rows[nextI]]
+val = (col_next[j] - col_last[j]) * ((i - last) / (nextI - last)) + col_last[j]
+cur_data_ap.append(val)
+po = All[k]
+cur = 0
+while val >= po[cur + 1]:
+cur += 1
+curIAQ = ((IAQI[cur + 1] - IAQI[cur]) / (po[cur + 1] - po[cur])) * (val - po[cur]) + IAQI[cur]
+IAQIP.append(math.ceil(curIAQ))
+else:
+k = j - 1
+if k >= len(All):
+break
+po = All[k]
+cur = 0
+cur_data_ap.append(val)
+while val >= po[cur + 1]:
+cur += 1
+curIAQ = ((IAQI[cur + 1] - IAQI[cur]) / (po[cur + 1] - po[cur])) * (val - po[cur]) + IAQI[cur]
+IAQIP.append(math.ceil(curIAQ))
+# 找到最大值
+data_ap.append(cur_data_ap)
+maxval = max(IAQIP)
+maxPo = []
+for j in range(0, len(IAQIP)):
+if IAQIP[j] == maxval:
+maxPo.append(j)
+maxPoS = ",".join(str(i) for i in maxPo)
+dis = [str(date), maxval, maxPoS]
+print(str(dis)+" "+str(cur_data_ap))
+ans.append(dis)
+return ans, data_ap
+
+
+def write_excel(file_name, result, data_ap):
+dirpath = os.path.dirname(os.path.abspath(__file__))
+result_path = os.path.join(dirpath, file_name)
+ans_book = None
+if os.path.exists(result_path):
+ans_book = load_workbook(result_path)
+else:
+ans_book = Workbook()
+ans_book.save(result_path)
+work_sheet = ans_book.active
+title = ['日期', 'AQI值', '污染物', 'AQI值之差', 'SO2', 'NO2', 'PM10', 'PM2.5', 'O3', 'CO']
+work_sheet.append(title)
+for i in range(0, len(result)):
+ans = [item for item in result[i]]
+cur_AQI = result[i][1]
+if i == 0 or cur_AQI is None:
+ans.append(None)
+else:
+last_AQI = result[i - 1][1]
+if last_AQI is None:
+ans.append(None)
+else:
+ans.append(cur_AQI - last_AQI)
+for val in data_ap[i]:
+ans.append(val)
+work_sheet.append(ans)
+ans_book.save(result_path)
+ans_book.close()
+
+
+if __name__ == '__main__':
+sheet = read_excel('appendix1.xlsx', 1)
+result, data_ap = parse_sheet(sheet)
+write_excel('Problem2.xlsx', result, data_ap)
  \end{lstlisting}
 
 
